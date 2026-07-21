@@ -2930,11 +2930,14 @@ section section .title::after{
     justify-content:center;
     align-items:center;
     position:relative;
+    overflow:visible;
 }
 
 .hero-image img{
-    width:500px;
-    max-width:none;
+    width:100%;
+    max-width:430px;
+    height:auto;
+    object-fit:cover;
     border-radius:28px;
     position:relative;
     z-index:2;
@@ -2944,8 +2947,7 @@ section section .title::after{
 }
 
 .hero-image img:hover{
-    transform:scale(1.03);
-}
+    transform:scale(1.02);
 }
 
 .profile-glow{
@@ -3018,9 +3020,10 @@ section section .title::after{
 @media(max-width:991px){
 
 .hero-container{
-    flex-direction:column-reverse;
-    text-align:center;
-    gap:60px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:100px;
 }
 
 .hero-content h1{
@@ -3028,9 +3031,11 @@ section section .title::after{
 }
 
 .hero-content h2{
-    font-size:22px;
+    margin-top:20px;
+    font-size:28px;
+    font-weight:500;
+    color:#e2e8f0;
 }
-
 .hero-content p{
     margin:auto;
     margin-top:25px;
